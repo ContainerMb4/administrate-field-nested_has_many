@@ -1,4 +1,8 @@
-<div class="nested-fields" style="width: 40%; margin-left: 20%;">
+<div class="field-unit__label">
+  <%= f.label field.association_name %>
+</div>
+
+<div class="nested-fields" style="margin-left: 32px">
 
   <%= f.fields_for field.association_name do |nested_form| %>
     <%= render(
