@@ -1,7 +1,5 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require "administrate/field/nested_has_many"
-
 Gem::Specification.new do |gem|
   gem.name = "administrate-field-nested_has_many"
   gem.version = "0.1.1"
@@ -16,11 +14,13 @@ Gem::Specification.new do |gem|
   gem.files = `git ls-files`.split("\n")
   gem.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
 
+  gem.add_dependency "administrate", "~> 0.8"
+  gem.add_dependency "cocoon", "~> 1.2"
+  gem.add_dependency "rails", ">= 4.2"
+
   # gem.add_dependency "administrate", "~> 0.2.1"
   # gem.add_dependency "cocoon", "~> 1.2"
   # gem.add_dependency "rails", "~> 4.2"
 
-  gem.add_dependency "administrate", "~> 0.8"
-  gem.add_dependency "cocoon", "~> 1.2"
-  gem.add_dependency "rails", ">= 4.2"
+  gem.add_development_dependency "rspec", "~> 3.4"
 end
